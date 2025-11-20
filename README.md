@@ -16,3 +16,4 @@ cd ~/dotfiles
 ## Contents
 
 - `.zshrc` - Zsh shell configuration
+- `.gitconfig` - Git configuration (customize MY_EMAIL and MY_GPG_KEY_ID)

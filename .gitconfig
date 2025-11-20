@@ -1,0 +1,58 @@
+[user]
+	name = Jonas Nicolaysen
+	email = MY_EMAIL
+	signingkey = MY_GPG_KEY_ID
+
+[commit]
+	template = ~/.gitmessage
+	gpgsign = true
+
+[push]
+	autoSetupRemote = true
+	default = current
+
+[pull]
+	rebase = true
+
+[rebase]
+	autoStash = true
+
+[fetch]
+	prune = true
+
+[diff]
+	tool = vimdiff
+	colorMoved = zebra
+
+[core]
+	autocrlf = input
+	editor = vim
+
+[tag]
+	gpgSign = true
+
+[credential]
+	helper = osxkeychain
+
+[credential "https://github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+
+[init]
+	defaultBranch = main
+
+[merge]
+	conflictStyle = diff3
+
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	unstage = reset HEAD --
+	last = log -1 HEAD
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit

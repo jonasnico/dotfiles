@@ -1,10 +1,9 @@
 #!/bin/bash
 
-# Backup existing dotfiles
+# Backup existing files and link
 backup_dir=~/dotfiles_backup_$(date +%Y%m%d_%H%M%S)
 mkdir -p "$backup_dir"
 
-# Function to backup and link
 link_dotfile() {
     local file=$1
     if [ -f ~/$file ] || [ -L ~/$file ]; then
@@ -15,7 +14,6 @@ link_dotfile() {
     ln -s ~/dotfiles/$file ~/$file
 }
 
-# Link dotfiles
 link_dotfile .zshrc
 link_dotfile .gitconfig
 

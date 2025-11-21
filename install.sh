@@ -19,7 +19,8 @@ link_dotfile .gitconfig
 
 echo "Installation complete! Backup saved to $backup_dir"
 echo ""
-echo "NOTE: Don't forget to customize .gitconfig:"
-echo "  - Add actual values for email and GPG key (or remove if not using GPG)"
+echo "NOTE: Don't forget to:"
+echo "  - Customize .gitconfig: Add actual values for email and GPG key (or remove if not using GPG)"
+echo "  - Create ~/.zsh_private for work-specific aliases and secrets (this file is not tracked in git)"
 echo ""
 echo "Restart your shell or run: source ~/.zshrc"
